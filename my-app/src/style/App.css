@@ -1,0 +1,261 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 80px;
+    padding: 0 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    flex-direction: column;
+}
+.last-next-btn  {
+    display:flex;
+    justify-content: space-between;
+    margin:30px;
+}
+.text-s{
+    width:300px;
+}
+.text-md{
+    width:600px;
+}
+.margin-top-30{
+    margin-top: 30px;
+}
+.margin-top-200{
+    margin-top: 200px;
+}
+.margin-top-100{
+    margin-top: 100px;
+}
+.text-xl{
+    width:900px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-left: 10px;
+}
+    
+.title {
+    margin: 0;
+}
+    
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 10px;
+}
+  
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+  
+.search-bar a {
+    display: inline-block;
+    background-color: #ec476e;
+    color: #fff;
+    border-radius: 25px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+  
+.search-bar a:hover {
+    background-color: #005fa3;
+}  
+    
+.home-link {
+    background-color: #ec476e;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    background-color: #005fa3;
+}
+
+select {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: #555;
+    border: none;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    padding: 8px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23555"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.albums-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.album {
+    cursor: pointer;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    flex-direction: column;
+    transition: transform 0.3s;
+  }
+  
+.album h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
+.album img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+  
+.album p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.album:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    z-index: 1;
+}
+
+.album:hover img {
+    filter: brightness(70%);
+}
+  
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #2596be;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+}
+  
+.modal img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+  
+.modal h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.modal p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+  
+.modal button {
+    font-size: 18px;
+    border: none;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.modal button:hover {
+    background-color: #e05055;
+}
+
+/* Pour les écrans plus petits que 886px */
+@media (max-width: 886px) {
+    .navbar {
+    flex-wrap: wrap;
+    }
+    .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+    .search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    .home-link {
+    width: 100%;
+
+    text-align: center;
+    }
+}
+/* Pour les écrans plus grands que 887px */
+@media (min-width: 887px) {
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    }
+    .search-bar {
+    display: flex;
+    align-items: center;
+    }
+    input[type="text"] {
+    width: 200px;
+    margin-right: 10px;
+    }
+}
